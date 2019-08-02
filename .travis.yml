@@ -1,0 +1,24 @@
+dist: xenial
+language: python
+cache: pip
+
+python:
+  - "3.6"
+  - "3.7"
+
+install: pip install ".[ci]"
+
+script:
+  - pytest --cov
+  - mypy thepackage
+
+after_success: codecov
+
+deploy:
+  provider: pypi
+  distributions: "sdist bdist_wheel"
+  username: $PYPI_USERNAME
+  password: $PYPI_PASSWORD
+  on:
+    tags: true
+    python: "3.7"
