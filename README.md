@@ -4,10 +4,25 @@ My opinionated [cookiecutter](https://github.com/cookiecutter/cookiecutter) temp
 
 ## Quickstart
 
-Install `cookiecutter`, then:
+Install `cookiecutter`, then run it using this template:
 
 ```bash
 cookiecutter https://github.com/florimondmanca/python-package-template
+```
+
+Example output when using defaults:
+
+```console
+$ cookiecutter https://github.com/florimondmanca/python-package-template
+year [2020]:
+author_full_name [Florimond Manca]:
+author_github_username [florimondmanca]:
+author_email [florimond.manca@gmail.com]:
+package_slug [example-package]:
+package_name [example_package]:
+package_short_description [Short description of the package.]:
+python_min_version [3.8]:
+azure_definition_id [1]:
 ```
 
 ## Usage
